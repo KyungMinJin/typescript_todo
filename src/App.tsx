@@ -1,13 +1,11 @@
 import React from 'react';
-import TodoList from './components/TodoList';
-import TodoInsert from './components/TodoInsert';
 import GlobalStyles from './GlobalStyles';
+import TodoApp from './containers/TodoApp';
 
 const App = () => {
   return (
     <>
-      <TodoInsert />
-      <TodoList />
+      <TodoApp />
       <GlobalStyles />
     </>
   );

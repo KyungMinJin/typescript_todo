@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Todo } from '../modules/todos';
+import { Todo } from '../modules/todo';
 import useTodoActions from '../hooks/useTodoActions';
 
 const StyledItem = styled.div`

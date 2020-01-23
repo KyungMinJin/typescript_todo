@@ -1,5 +1,5 @@
-import { createReducer } from 'typesafe-actions';
 import { TodosState, TodosAction } from './types';
+import { createReducer } from 'typesafe-actions';
 import { ADD_TODO, TOGGLE_TODO, REMOVE_TODO } from './actions';
 
 const initialState: TodosState = [];
