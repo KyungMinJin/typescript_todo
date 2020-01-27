@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { MdMenu, MdVideoCall, MdApps, MdNotifications } from 'react-icons/md';
+import { TiSocialYoutube } from 'react-icons/ti';
+import { FaUserCircle } from 'react-icons/fa';
 
 const HeaderBlock = styled.div`
   display: flex;
@@ -14,7 +17,7 @@ const HeaderBlock = styled.div`
     .toggle-menu {
       width: 24px;
       height: 24px;
-      padding: 8px;
+      /* padding: 8px; */
       margin-right: 16px;
     }
     .brand {
@@ -34,11 +37,17 @@ const HeaderBlock = styled.div`
     justify-content: center;
     align-items: center;
     .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 40px;
       height: 40px;
       margin-right: 8px;
     }
     .user {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 60px;
       height: 40px;
     }
@@ -68,8 +77,12 @@ const Header: React.FC = () => {
   return (
     <HeaderBlock>
       <div className='wrapper'>
-        <div className='toggle-menu'>a</div>
-        <div className='brand'>Youtube</div>
+        <div className='toggle-menu'>
+          <MdMenu />
+        </div>
+        <div className='brand'>
+          <TiSocialYoutube /> Youtube
+        </div>
       </div>
       <div className='search'>
         <form>
@@ -78,10 +91,18 @@ const Header: React.FC = () => {
         </form>
       </div>
       <div className='end'>
-        <div className='icon'>업롣</div>
-        <div className='icon'>메뉴</div>
-        <div className='icon'>알림</div>
-        <div className='user'>User</div>
+        <div className='icon'>
+          <MdVideoCall />
+        </div>
+        <div className='icon'>
+          <MdApps />
+        </div>
+        <div className='icon'>
+          <MdNotifications />
+        </div>
+        <div className='user'>
+          <FaUserCircle />
+        </div>
       </div>
     </HeaderBlock>
   );

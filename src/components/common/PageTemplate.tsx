@@ -7,7 +7,11 @@ const Wrapper = styled.div`
   display: flex;
 `;
 
-const PageTemplate: React.FC = ({ children }) => {
+type Props = {
+  children: React.ReactNode;
+};
+
+function PageTemplate({ children }: Props) {
   return (
     <>
       <Header />
@@ -17,6 +21,6 @@ const PageTemplate: React.FC = ({ children }) => {
       </Wrapper>
     </>
   );
-};
+}
 
 export default PageTemplate;
