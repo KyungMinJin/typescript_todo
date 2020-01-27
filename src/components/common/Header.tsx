@@ -56,9 +56,9 @@ const HeaderBlock = styled.div`
 
 const StyledInput = styled.input`
   width: 575px;
-  height: 24px;
+  height: 30px;
   border-radius: 2px 0 0 2px;
-  padding: 2px 6px;
+  padding: 3px 6px;
   background: none;
   border: 1px solid #e2e2e2;
   border-right: none;
@@ -81,7 +81,7 @@ const Header: React.FC = () => {
           <MdMenu />
         </div>
         <div className='brand'>
-          <TiSocialYoutube /> Youtube
+          <TiSocialYoutube style={{ color: 'Red', fontSize: 20 }} /> Youtube
         </div>
       </div>
       <div className='search'>

@@ -23,6 +23,10 @@ const DrawerBlock = styled.div`
   flex-direction: column;
   overflow-y: scroll;
   .wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     margin: 8px 0;
     border-bottom: 1px solid #ececec;
   }
