@@ -10,6 +10,7 @@ const HeaderBlock = styled.div`
   height: 56px;
   padding: 0 16px;
   align-items: center;
+  font-size: 20px;
   .wrapper {
     display: flex;
     align-items: center;

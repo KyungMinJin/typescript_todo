@@ -18,6 +18,7 @@ import { GoBroadcast, GoReport } from 'react-icons/go';
 const DrawerBlock = styled.div`
   font-size: 14px;
   max-width: 240px;
+  width: 240px;
   display: flex;
   flex: 1;
   flex-direction: column;

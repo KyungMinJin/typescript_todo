@@ -9,7 +9,7 @@ body {
   box-sizing: border-box;
   min-height: 100%;
   line-height: 1.5;
-  font-size: 20px;
+  font-size: 10px;
 }
 
 #root {
