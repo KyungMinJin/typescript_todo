@@ -4,7 +4,7 @@ import VideoList from './VideoList';
 
 const RecommendBlock = styled.div`
   margin: 0 24px;
-  max-width: 80%;
+
   .title {
     font-size: 20px;
     margin: 36px 0 24px 24px;
