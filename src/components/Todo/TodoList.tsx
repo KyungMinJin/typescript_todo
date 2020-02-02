@@ -1,6 +1,6 @@
 import React from 'react';
 import TodoItem from './TodoItem';
-import { Todo } from '../modules/todo';
+import { Todo } from '../../modules/todo';
 
 type TodoListProps = {
   todos: Todo[];
@@ -14,7 +14,12 @@ function TodoList({ todos, onToggle, onRemove }: TodoListProps) {
   return (
     <ul>
       {todos.map(todo => (
-        <TodoItem todo={todo} key={todo.id} />
+        <TodoItem
+          todo={todo}
+          key={todo.id}
+          onToggle={onToggle}
+          onRemove={onRemove}
+        />
       ))}
     </ul>
   );

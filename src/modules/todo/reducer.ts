@@ -3,11 +3,11 @@ import { createReducer } from 'typesafe-actions';
 import { ADD_TODO, TOGGLE_TODO, REMOVE_TODO } from './actions';
 
 const initialState: TodosState = [];
+
 const todos = createReducer<TodosState, TodosAction>(initialState, {
-  [ADD_TODO]: (state, { payload: text }) =>
+  [ADD_TODO]: (state, action) =>
     state.concat({
-      id: Math.max(...state.map(todo => todo.id)) + 1,
-      text,
+      ...action.payload, // id, text 를 이 안에 넣기
       done: false
     }),
   [TOGGLE_TODO]: (state, { payload: id }) =>

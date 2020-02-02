@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Todo } from '../modules/todo';
-import useTodoActions from '../hooks/useTodoActions';
+import { Todo } from '../../modules/todo';
 
 const StyledItem = styled.div`
   .TodoItem .text {
@@ -20,20 +19,27 @@ const StyledItem = styled.div`
   }
 `;
 
-export type TodoItemProps = {
+type TodoItemProps = {
   todo: Todo;
+  onToggle: (id: number) => void;
+  onRemove: (id: number) => void;
 };
 
-function TodoItem({ todo }: TodoItemProps) {
-  const { onToggle, onRemove } = useTodoActions(todo.id);
-
+function TodoItem({ todo, onToggle, onRemove }: TodoItemProps) {
+  console.log(todo.id);
+  const handleToggle = () => {
+    onToggle(todo.id);
+  };
+  const handleRemove = () => {
+    onRemove(todo.id);
+  };
   return (
     <StyledItem>
       <li className={`TodoItem ${todo.done ? 'done' : ''}`}>
-        <span className='text' onClick={onToggle}>
+        <span className='text' onClick={handleToggle}>
           {todo.text}
         </span>
-        <span className='remove' onClick={onRemove}>
+        <span className='remove' onClick={handleRemove}>
           X
         </span>
       </li>
