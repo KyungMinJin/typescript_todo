@@ -36,10 +36,10 @@ function TodoItem({ todo, onToggle, onRemove }: TodoItemProps) {
   return (
     <StyledItem>
       <li className={`TodoItem ${todo.done ? 'done' : ''}`}>
-        <span className='text' onClick={handleToggle}>
+        <span className="text" onClick={handleToggle}>
           {todo.text}
         </span>
-        <span className='remove' onClick={handleRemove}>
+        <span className="remove" onClick={handleRemove}>
           X
         </span>
       </li>

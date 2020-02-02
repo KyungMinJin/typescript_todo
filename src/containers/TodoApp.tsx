@@ -12,12 +12,15 @@ function TodoApp() {
   const onInsert = (text: string) => {
     dispatch(addTodo(text));
   };
+
   const onToggle = (id: number) => {
     dispatch(toggleTodo(id));
   };
+
   const onRemove = (id: number) => {
     dispatch(removeTodo(id));
   };
+
   return (
     <>
       <TodoInsert onInsert={onInsert} />
